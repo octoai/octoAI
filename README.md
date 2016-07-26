@@ -30,7 +30,7 @@ Coming soon
 ## Why is all this goodness for free?
 In all fairness we are capitalists. Our inital goal were solving high end user personalization problems using machine learning on user behaviour patterns. It turns out that the assumption that people actually had historical data stored was false, and actually getting a buy in to wait for 3 months on a brand new startup was tough!
 
-From out point of view, to actually build the intelligent services it would require a whole new layer in the existing software development stack where all analytical data would be stored (as early as possible in the application's lifecycle). We decided that our first goal should be to get people to store this data! This is how we decided to open source most of our stack. 
+From our point of view, to actually build the intelligent services it would require a whole new layer in the existing software development stack where all analytical data would be stored (as early as possible in the application's lifecycle). We decided that our first goal should be to get people to store this data! This is how we decided to open source most of our stack. 
 
 ## Tell me more? 
 To know more you can reach us at admin@octo.ai
