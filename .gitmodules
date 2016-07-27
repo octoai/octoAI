@@ -1,12 +1,15 @@
-[submodule "recurring-jobs"]
-	path = recurring-jobs
-	url = git@github.com:octoai/recurring-jobs.git
-[submodule "apihandler"]
-	path = apihandler
+[submodule "components/apihandler"]
+	path = components/apihandler
 	url = git@github.com:octoai/apihandler.git
-[submodule "apiconsumer"]
-	path = apiconsumer
+[submodule "components/apiconsumer"]
+	path = components/apiconsumer
 	url = git@github.com:octoai/apiconsumer.git
-[submodule "enterprise-dashboard"]
-	path = enterprise-dashboard
+[submodule "components/recurring-jobs"]
+	path = components/recurring-jobs
+	url = git@github.com:octoai/recurring-jobs.git
+[submodule "components/config"]
+	path = components/config
+	url = git@github.com:octoai/config.git
+[submodule "components/enterprise-dashboard"]
+	path = components/enterprise-dashboard
 	url = git@github.com:octoai/enterprise-dashboard.git
