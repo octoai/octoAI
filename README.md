@@ -11,6 +11,17 @@ So the core uses are the following
 - Use own internal SDK (octo.ai based) for all analytics needs, one SDK to rule them all. 
 - Continue to use multiple analytics backend (GA, mix panel, etc.), switch them on and off whenever you want. 
 
+So lets have a before and after with octo. 
+
+***Your setup right now***
+![Before](https://raw.githubusercontent.com/octoai/octo.ai/master/docs/images/before.png)
+
+*** With the Octo goodness ***
+![After](https://raw.githubusercontent.com/octoai/octo.ai/master/docs/images/after.png)
+
+
+Here is an overview of octo internals.
+
 ![Architecture](https://raw.githubusercontent.com/octoai/octo.ai/master/docs/images/components.png)
 
 We integrate with the following analytics services, and continue to add more. 
