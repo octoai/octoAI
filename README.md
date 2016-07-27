@@ -11,7 +11,7 @@ So the core uses are the following
 - Use own internal SDK (octo.ai based) for all analytics needs, one SDK to rule them all. 
 - Continue to use multiple analytics backend (GA, mix panel, etc.), switch them on and off whenever you want. 
 
-![Architecture](?raw=true)
+![Architecture](https://raw.githubusercontent.com/octoai/octo.ai/master/docs/images/components.png)
 
 We integrate with the following analytics services, and continue to add more. 
 - Google Analytics
@@ -22,9 +22,6 @@ Feel free to ask for more integrations!
 
 # Installation
 Coming soon
-## Quick Install
-### Prequisites
-## Manual Install
 
 # FAQs
 ## Why is all this goodness for free?
@@ -39,6 +36,7 @@ To know more you can reach us at admin@octo.ai
 - [Integrating a new analytics service backend]
 - [Adding more beacon calls]
 - [Adding a new dashboard page]
+- [Using the data APIs for your dashboard]
 
 ## Can I become a contributor?
 Please follow Octo.ai [Contributor's Guide] (https://github.com/octoai/octo.ai/blob/master/CONTRIBUTING)
