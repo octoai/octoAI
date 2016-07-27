@@ -1,5 +1,5 @@
 # Octo.ai Quickstart guide
-The analytics hypervisor, one framework to enable all your cloud analytics needs and licensed under Apache 2.0 License.
+The analytics hypervisor, an operating system to manage all your analytics needs and licensed under Apache 2.0 License.
 
 **What does that even mean??**
 
@@ -16,20 +16,24 @@ So lets have a before and after with octo.
 ***Your setup right now***
 ![Before](https://raw.githubusercontent.com/octoai/octo.ai/master/docs/images/before.png)
 
-*** With the Octo goodness ***
+***With the Octo goodness***
 ![After](https://raw.githubusercontent.com/octoai/octo.ai/master/docs/images/after.png)
 
 
-Here is an overview of octo internals.
+# System overview
+
+We stand on the shoulders of giants like
+- Kafka
+- Cassandra DB
+- Ruby & its ecosystem
+- Docker 
+and many others unamed!
 
 ![Architecture](https://raw.githubusercontent.com/octoai/octo.ai/master/docs/images/components.png)
 
 We integrate with the following analytics services, and continue to add more. 
 - Google Analytics
-- Mixpanel
-- Clevertap (coming soon) 
-
-Feel free to ask for more integrations! 
+- Mixpanel (Coming soon)
 
 # Installation
 Coming soon
