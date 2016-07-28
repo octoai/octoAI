@@ -17,18 +17,18 @@ function gexit {
 #
 function init_config {
   echo 'Initializing component: config'
-  git submodule update components/config
+  git submodule update --init components/config
 }
 
 # Initialize every other repo
 #
 function init_repos {
   echo 'Initializing components...'
-  git submodule update components/apiconsumer
-  git submodule update components/apihandler
-  git submodule update components/enterprise-dashboard
-  git submodule update components/recurring-jobs
-#  git submodule update components/config
+  git submodule update --init components/apiconsumer
+  git submodule update --init components/apihandler
+  git submodule update --init components/enterprise-dashboard
+  git submodule update --init components/recurring-jobs
+#  git submodule update --init components/config
 }
 
 # Symlink/copy the central config repo to its destinations
