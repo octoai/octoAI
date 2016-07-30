@@ -36,7 +36,9 @@ We integrate with the following analytics services, and continue to add more.
 - Mixpanel (Coming soon)
 
 # Installation
-Coming soon
+
+- Manual installation and setp ([https://github.com/octoai/octo.ai/wiki/Setup-Guide](https://github.com/octoai/octo.ai/wiki/Setup-Guide))
+- Dockerized (Coming Soon)
 
 # FAQs
 ## Why is all this goodness for free?
