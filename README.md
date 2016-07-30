@@ -35,25 +35,35 @@ We integrate with the following analytics services, and continue to add more.
 - Google Analytics
 - Mixpanel (Coming soon)
 
-# Installation
-
-- Manual installation and setp ([https://github.com/octoai/octo.ai/wiki/Setup-Guide](https://github.com/octoai/octo.ai/wiki/Setup-Guide))
-- Dockerized (Coming Soon)
-
 # FAQs
 ## Why is all this goodness for free?
 In all fairness we are capitalists. Our inital goal were solving high end user personalization problems using machine learning on user behaviour patterns. It turns out that the assumption that people actually had historical data stored was false, and actually getting a buy in to wait for 3 months on a brand new startup was tough!
 
 From our point of view, to actually build the intelligent services it would require a whole new layer in the existing software development stack where all analytical data would be stored (as early as possible in the application's lifecycle). We decided that our first goal should be to get people to store this data! This is how we decided to open source most of our stack. 
 
-## Tell me more? 
-To know more you can reach us at admin@octo.ai
+## Wiki?
 
-## How can i develop this?
-- [Integrating a new analytics service backend]
-- [Adding more beacon calls]
-- [Adding a new dashboard page]
-- [Using the data APIs for your dashboard]
+Yes. Check out our [wiki](https://github.com/octoai/octo.ai/wiki). It will contain all further details about architecture, integration, setup and more. [https://github.com/octoai/octo.ai/wiki](https://github.com/octoai/octo.ai/wiki).
+
+## How do i use it?
+
+In order to be able to use Octo-matic, you need to run the Octo-matic cluster. This cluster consists of an api endpoint, an api consumer, a [resque](https://github.com/resque/resque)  background jobs system, a dashboard. There are more components to it, and you can choose to have them. But the above ones are core and need to be present.
+
+There are two ways to setup the cluster:
+
+- [Manual setup](https://github.com/octoai/octo.ai/wiki/Setup-Guide). A set of all totems to get the components up and running.
+- Dockerized (Coming Soon)
+
+## How can i develop it?
+
+- Visit [Roadmap](https://github.com/octoai/octo.ai/wiki/Roadmap) and see if something you want is on the roadmap or not.
+- If it is, go to the concerned repo and view it's milestones, and you should be able to find an issue. If not, please create an issue for what you want.
+- If it is not, please create an issue in the concerned repo and someone will discuss it over.
+	- You can also add it to the [wishlist](https://github.com/octoai/octo.ai/wiki/Wishlist)
 
 ## Can I become a contributor?
 Please follow Octo.ai [Contributor's Guide] (https://github.com/octoai/octo.ai/blob/master/CONTRIBUTING)
+
+### Contact Info
+
+`admin` [AT] `octo[DOT]ai`
