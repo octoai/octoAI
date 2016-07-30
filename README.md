@@ -27,7 +27,7 @@ We stand on the shoulders of giants like
 - Cassandra DB
 - Ruby & its ecosystem
 - Docker 
-and many others unamed!
+and many others unnamed!
 
 ![Architecture](https://raw.githubusercontent.com/octoai/octo.ai/master/docs/images/components.png)
 
@@ -45,7 +45,7 @@ From our point of view, to actually build the intelligent services it would requ
 
 Yes. Check out our [wiki](https://github.com/octoai/octo.ai/wiki). It will contain all further details about architecture, integration, setup and more. [https://github.com/octoai/octo.ai/wiki](https://github.com/octoai/octo.ai/wiki).
 
-## How do i use it?
+## How do I use it?
 
 In order to be able to use Octo-matic, you need to run the Octo-matic cluster. This cluster consists of an api endpoint, an api consumer, a [resque](https://github.com/resque/resque)  background jobs system, a dashboard. There are more components to it, and you can choose to have them. But the above ones are core and need to be present.
 
@@ -54,7 +54,7 @@ There are two ways to setup the cluster:
 - [Manual setup](https://github.com/octoai/octo.ai/wiki/Setup-Guide). A set of all totems to get the components up and running.
 - Dockerized (Coming Soon)
 
-## How can i develop it?
+## How can I develop it?
 
 - Visit [Roadmap](https://github.com/octoai/octo.ai/wiki/Roadmap) and see if something you want is on the roadmap or not.
 - If it is, go to the concerned repo and view it's milestones, and you should be able to find an issue. If not, please create an issue for what you want.
