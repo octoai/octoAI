@@ -1,4 +1,6 @@
 # Octo.ai Quickstart guide
+[![Codewake](https://www.codewake.com/badges/ask_question.svg)](https://www.codewake.com/p/octo-ai)
+
 The analytics hypervisor, an operating system to manage all your analytics needs and licensed under Apache 2.0 License.
 
 **What does that even mean??**
