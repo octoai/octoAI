@@ -1,0 +1,45 @@
+octo_redis:
+ image: redis:latest
+ hostname: redis
+
+octo_cassandra:
+ image: cassandra:2.2.4
+ hostname: cassandra
+ ports:
+  - "9042:9042"
+
+enterprisedashboard:
+ build: ./components/enterprise-dashboard
+ volumes:
+  - ./config.yml:/apps/config/config.yml
+ links:
+  - octo_redis:redis
+ ports:
+  - "9002:9002"
+
+jobs:
+ build: ./components/recurring-jobs
+ volumes:
+  - ./config.yml:/apps/config/config.yml
+ links:
+  - octo_redis:redis
+
+apihandler:
+ build: ./components/apihandler
+ volumes:
+  - ./config.yml:/apps/config/config.yml
+ links:
+ - octo_redis:redis
+ - octo_cassandra:cassandra
+
+#apiconsumer:
+# build: ./components/apiconsumer
+# volumes:
+#  - ./config.yml:/apps/config/config.yml
+# links:
+# - octo_redis:redis
+# - octo_cassandra:cassandra
+# - octo_kafka:kafka
+# - octo_zookeeper:zookeeper
+
+
