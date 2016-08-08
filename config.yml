@@ -1,0 +1,114 @@
+cassandra:
+  host: cassandra
+  port: 9042
+  keyspace: octo_development
+  max_retries: 3
+  retry_delay: 1
+  replication:
+    class: SimpleStrategy
+    replication_factor: 1
+redis:
+  host: redis
+  port: 6379
+statsd:
+  host: 127.0.0.1
+  port: 8125
+kafka:
+  brokers:
+    - 127.0.0.1:9092
+  client_id: octomatic_development
+  topic: events
+  max_buffer_size: 20_000
+  max_queue_size: 10_000
+  delivery_interval: 1
+logile: '/tmp/octo.log'
+allowed_events:
+  - app.init
+  - app.login
+  - app.logout
+  - page.view
+  - productpage.view
+  - update.push_token
+  - update.profile
+  - product.add
+  - product.update
+  - product.delete
+  - funnel_update
+kong:
+  url: 'http://127.0.0.1:8001'
+apns:
+  host: 'gateway.sandbox.push.apple.com'
+aws:
+  region: 'ap-southeast-1'
+  secret_key: 'AWS_SECRET_KEY'
+  access_key: 'AWS_ACCESS_KEY'
+  bucket_name: 'octo-enterprise'
+ioscertificate:
+  filename: 'ioscertificate.pem'
+search:
+  server: http://127.0.0.1:9200
+  disk_threshold_low: 0.94
+  disk_threshold_high: 0.98
+mandrill_api_key: 'xxxxxxxxxxx-generated-api-key-xxxxxxxxxxx'
+email_sender:
+  name: 'Octomatic'
+  email: 'info@octo.ai'
+email_to:
+  - name: 'Dipankar Sarkar'
+    email: 'dipankar@octo.ai'
+  - name: 'Akshay Aron'
+    email: 'aron@octo.ai'
+  - name: 'Pranav Prakash'
+    email: 'pp@octo.ai'
+# This session is stored in redis for every user. Value in seconds
+session_length: 5
+# These are the default templates that would be set for any new enterprise added
+push_templates:
+  - name: trending
+    text: "%{product_name} is trending right now. It's available for only INR %{product_price}. Check it out now."
+  - name: recommended
+    text: "We think you would love %{product1_name}, %{product2_name} and %{product3_name}. Check them out."
+  - name: curated
+    text: "We've handpicked %{product1_name} and %{product2_name} for you. You'd be really pleased."
+  - name: similar
+    text: "Are you looking for %{product1_name}, %{product2_name} and %{product3_name}? They're available at great offers. Check it out now."
+  - name: custom1
+    text: "You should customize this message before sending."
+  - name: custom2
+    text: "You should customize this message before sending."
+
+# These are the intelligent segments that are created for any new enterprise added
+# Ref Octo::Segment for more details
+intelligent_segments:
+  - name: Highly Engaged Users
+    type: Octo::Segmentation::SegmentType::USER
+    dimensions:
+      - Octo::Segmentation::Dimensions::ENGAGEMENT
+    operators:
+      - Octo::Segmentation::Operators::EQUAL
+    values:
+      - Octo::UserPersona::HIGH_ENGAGED
+  - name: Moderately Engaged Users
+    type: Octo::Segmentation::SegmentType::USER
+    dimensions:
+      - Octo::Segmentation::Dimensions::ENGAGEMENT
+    operators:
+      - Octo::Segmentation::Operators::EQUAL
+    values:
+      - Octo::UserPersona::MEDIUM_ENGAGED
+  - name: Low Engaged Users
+    type: Octo::Segmentation::SegmentType::USER
+    dimensions:
+      - Octo::Segmentation::Dimensions::ENGAGEMENT
+    operators:
+      - Octo::Segmentation::Operators::EQUAL
+    values:
+      - Octo::UserPersona::LOW_ENGAGED
+  - name: Slipping Out Users
+    type: Octo::Segmentation::SegmentType::USER
+    dimensions:
+      - Octo::Segmentation::Dimensions::ENGAGEMENT
+    operators:
+      - Octo::Segmentation::Operators::EQUAL
+    values:
+      - Octo::UserPersona::DEAD
