@@ -8,6 +8,16 @@ octo_cassandra:
  ports:
   - "9042:9042"
 
+octo_kafka:
+ image: spotify/kafka
+ hostname: kafka
+ ports:
+  - "2181:2181"
+  - "9092:9092"
+ environment:
+  - ADVERTISED_HOST=192.168.99.100
+  - ADVERTISED_PORT=9092
+
 enterprisedashboard:
  build: ./components/enterprise-dashboard
  volumes:
@@ -28,6 +38,7 @@ apihandler:
  build: ./components/apihandler
  volumes:
   - ./config.yml:/apps/config/config.yml
+  - ./kong_config.yml:/apps/config/kong_config.yml
  links:
  - octo_redis:redis
  - octo_cassandra:cassandra
@@ -41,5 +52,3 @@ apihandler:
 # - octo_cassandra:cassandra
 # - octo_kafka:kafka
 # - octo_zookeeper:zookeeper
-
-
