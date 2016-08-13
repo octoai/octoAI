@@ -1,5 +1,5 @@
 cassandra:
-  host: cassandra
+  host: 192.168.99.100
   port: 9042
   keyspace: octo_development
   max_retries: 3
@@ -15,7 +15,7 @@ statsd:
   port: 8125
 kafka:
   brokers:
-    - 127.0.0.1:9092
+    - 192.168.99.100:9092
   client_id: octomatic_development
   topic: events
   max_buffer_size: 20_000
@@ -35,7 +35,7 @@ allowed_events:
   - product.delete
   - funnel_update
 kong:
-  url: 'http://127.0.0.1:8001'
+  url: 'http://192.168.99.100:8001'
 apns:
   host: 'gateway.sandbox.push.apple.com'
 aws:

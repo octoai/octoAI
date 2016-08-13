@@ -1,0 +1,45 @@
+:clients:
+  - :name: Jaobng
+    :email: admin@jaobng.com
+    :password: yothisisnotapassword
+    :admin: false
+    :rate-limiting:
+      :day: 100000
+      :minute: 100
+      :second: 100
+      :hour: 10000
+      :month: 100000
+      :year: 1000000000
+  - :name: Octo
+    :email: api@octo.ai
+    :password: randompasswordhere
+    :admin: true
+:apis:
+  - :name:  events
+    :request_path: /events
+    :upstream_url: http://192.168.99.100:9001/events
+  - :name:  UpdatePushToken
+    :request_path: /update_push_token
+    :upstream_url: http://192.168.99.100:9001/update_push_token
+:plugins:
+  :key-auth:
+    :apis:
+      - :events
+      - :UpdatePushToken
+    :clients: all
+    :config:
+      :key_names: apikey
+  :cors:
+    :apis:
+      - :events
+      - :UpdatePushToken
+    :clients: all
+    :config:
+      :methods: 'GET,POST'
+      :origin: '*'
+  :rate-limiting:
+    :apis:
+      - :events
+    :clients:
+      - Jaobng
+:kong: 192.168.99.100:8001
