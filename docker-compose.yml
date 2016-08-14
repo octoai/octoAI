@@ -43,12 +43,11 @@ apihandler:
  - octo_redis:redis
  - octo_cassandra:cassandra
 
-#apiconsumer:
-# build: ./components/apiconsumer
-# volumes:
-#  - ./config.yml:/apps/config/config.yml
-# links:
-# - octo_redis:redis
-# - octo_cassandra:cassandra
-# - octo_kafka:kafka
-# - octo_zookeeper:zookeeper
+apiconsumer:
+ build: ./components/apiconsumer
+ volumes:
+  - ./config.yml:/apps/config/config.yml
+ links:
+  - octo_redis:redis
+  - octo_cassandra:cassandra
+  - octo_kafka:kafka
