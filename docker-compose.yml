@@ -1,53 +1,80 @@
-octo_redis:
- image: redis:latest
- hostname: redis
+version: '2'
 
-octo_cassandra:
- image: cassandra:2.2.4
- hostname: cassandra
- ports:
-  - "9042:9042"
 
-octo_kafka:
- image: spotify/kafka
- hostname: kafka
- ports:
-  - "2181:2181"
-  - "9092:9092"
- environment:
-  - ADVERTISED_HOST=192.168.99.100
-  - ADVERTISED_PORT=9092
+networks:
+  octo:
+    ipam:
+      driver: bridge
+      config:
+      - subnet: 192.168.99.0/24
+        gateway: 192.168.99.100
+services:
+  octo_redis:
+   networks: 
+      - octo
+   image: redis:latest
+   hostname: redis
 
-enterprisedashboard:
- build: ./components/enterprise-dashboard
- volumes:
-  - ./config.yml:/apps/config/config.yml
- links:
-  - octo_redis:redis
- ports:
-  - "9002:9002"
+  octo_cassandra:
+   networks: 
+      - octo
+   image: cassandra:2.2.4
+   hostname: cassandra
+   ports:
+    - "9042:9042"
 
-jobs:
- build: ./components/recurring-jobs
- volumes:
-  - ./config.yml:/apps/config/config.yml
- links:
-  - octo_redis:redis
+  octo_kafka:
+   networks: 
+      - octo
+   image: spotify/kafka
+   hostname: kafka
+   ports:
+    - "2181:2181"
+    - "9092:9092"
+   environment:
+    - ADVERTISED_HOST=192.168.99.100
+    - ADVERTISED_PORT=9092
 
-apihandler:
- build: ./components/apihandler
- volumes:
-  - ./config.yml:/apps/config/config.yml
-  - ./kong_config.yml:/apps/config/kong_config.yml
- links:
- - octo_redis:redis
- - octo_cassandra:cassandra
+  enterprisedashboard:
+   networks: 
+      - octo
+   build: ./components/enterprise-dashboard
+   volumes:
+    - ./config.yml:/apps/config/config.yml
+   links:
+    - octo_redis:redis
+   ports:
+    - "9002:9002"
 
-apiconsumer:
- build: ./components/apiconsumer
- volumes:
-  - ./config.yml:/apps/config/config.yml
- links:
-  - octo_redis:redis
-  - octo_cassandra:cassandra
-  - octo_kafka:kafka
+  jobs:
+   networks: 
+      - octo
+   build: ./components/recurring-jobs
+   volumes:
+    - ./config.yml:/apps/config/config.yml
+   links:
+    - octo_redis:redis
+
+  apihandler:
+   networks: 
+      - octo
+   build: ./components/apihandler
+   volumes:
+    - ./config.yml:/apps/config/config.yml
+    - ./kong_config.yml:/apps/config/kong_config.yml
+   links:
+   - octo_redis:redis
+   - octo_cassandra:cassandra
+   ports:
+    - "9001:9001"
+
+  apiconsumer:
+   networks: 
+      - octo
+   build: ./components/apiconsumer
+   volumes:
+    - ./config.yml:/apps/config/config.yml
+   links:
+    - octo_redis:redis
+    - octo_cassandra:cassandra
+    - octo_kafka:kafka
