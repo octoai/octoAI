@@ -1,6 +1,6 @@
-DISCLAIMER: This project is not related to **https://octo.ai**. 
+DISCLAIMER: This project is not related to **https://octoAI**. 
 
-# Octo.ai Quickstart guide
+# octoAI Quickstart guide
 [![Codewake](https://www.codewake.com/badges/ask_question.svg)](https://www.codewake.com/p/octo-ai)
 
 The analytics hypervisor, an operating system to manage all your analytics needs and licensed under Apache 2.0 License.
@@ -12,16 +12,16 @@ Well, the biggest problem with any form of machine learning or data based system
 So the core uses are the following 
 - Storage of all your analytics data, your data, you own it. 
 - Pre-built dashboard to view your data, extend it for your needs! 
-- Use own internal SDK (octo.ai based) for all analytics needs, one SDK to rule them all. 
+- Use own internal SDK (octoAI based) for all analytics needs, one SDK to rule them all. 
 - Continue to use multiple analytics backend (GA, mix panel, etc.), switch them on and off whenever you want. 
 
 So lets have a before and after with octo. 
 
 ***Your setup right now***
-![Before](https://raw.githubusercontent.com/octoai/octo.ai/master/docs/images/before.png)
+![Before](https://raw.githubusercontent.com/octoai/octoAI/master/docs/images/before.png)
 
 ***With the Octo goodness***
-![After](https://raw.githubusercontent.com/octoai/octo.ai/master/docs/images/after.png)
+![After](https://raw.githubusercontent.com/octoai/octoAI/master/docs/images/after.png)
 
 
 # System overview
@@ -33,7 +33,7 @@ We stand on the shoulders of giants like
 - Docker 
 and many others unnamed!
 
-![Architecture](https://raw.githubusercontent.com/octoai/octo.ai/master/docs/images/components.png)
+![Architecture](https://raw.githubusercontent.com/octoai/octoAI/master/docs/images/components.png)
 
 We integrate with the following analytics services, and continue to add more. 
 - Google Analytics
@@ -47,7 +47,7 @@ From our point of view, to actually build the intelligent services it would requ
 
 ## Wiki?
 
-Yes. Check out our [wiki](https://github.com/octoai/octo.ai/wiki). It will contain all further details about architecture, integration, setup and more. [https://github.com/octoai/octo.ai/wiki](https://github.com/octoai/octo.ai/wiki).
+Yes. Check out our [wiki](https://github.com/octoai/octoAI/wiki). It will contain all further details about architecture, integration, setup and more. [https://github.com/octoai/octoAI/wiki](https://github.com/octoai/octoAI/wiki).
 
 ## How do I use it?
 
@@ -55,18 +55,18 @@ In order to be able to use Octo-matic, you need to run the Octo-matic cluster. T
 
 There are two ways to setup the cluster:
 
-- [Manual setup](https://github.com/octoai/octo.ai/wiki/Setup-Guide). A set of all totems to get the components up and running.
+- [Manual setup](https://github.com/octoai/octoAI/wiki/Setup-Guide). A set of all totems to get the components up and running.
 - Dockerized (Coming Soon)
 
 ## How can I develop it?
 
-- Visit [Roadmap](https://github.com/octoai/octo.ai/wiki/Roadmap) and see if something you want is on the roadmap or not.
+- Visit [Roadmap](https://github.com/octoai/octoAI/wiki/Roadmap) and see if something you want is on the roadmap or not.
 - If it is, go to the concerned repo and view it's milestones, and you should be able to find an issue. If not, please create an issue for what you want.
 - If it is not, please create an issue in the concerned repo and someone will discuss it over.
-	- You can also add it to the [wishlist](https://github.com/octoai/octo.ai/wiki/Wishlist)
+	- You can also add it to the [wishlist](https://github.com/octoai/octoAI/wiki/Wishlist)
 
 ## Can I become a contributor?
-Please follow Octo.ai [Contributor's Guide] (https://github.com/octoai/octo.ai/blob/master/CONTRIBUTING)
+Please follow octoAI [Contributor's Guide] (https://github.com/octoai/octoAI/blob/master/CONTRIBUTING)
 
 ### Contact Info
 
