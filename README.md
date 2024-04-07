@@ -1,3 +1,5 @@
+DISCLAIMER: This project is not related to **https://octo.ai**. 
+
 # Octo.ai Quickstart guide
 [![Codewake](https://www.codewake.com/badges/ask_question.svg)](https://www.codewake.com/p/octo-ai)
 
